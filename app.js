@@ -1,5 +1,5 @@
 const path = require('path');
-const h = 'https://berukenkun.github.io/WebShop/';
+
 const express = require('express');
 
 const adminRoutes = require('./routes/admin');
@@ -21,4 +21,4 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-app.listen(h);
+app.listen(process.env.PORT || 3000);
